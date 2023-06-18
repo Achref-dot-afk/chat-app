@@ -1,12 +1,13 @@
-const socket = io("http://localhost:3000");
+document.addEventListener('DOMContentLoaded', () => {
+const socket = io();
 
 // Receive and display messages
+
 socket.on('chat message', (message) => {
-  const block = document.createElement('div');
-  block.classList.add('block');
-  block.innerText = message;
-  document.getElementById('chat').appendChild(block);
-});
+  createblock(message);
+}
+);
+
 
 // Handle form submission
 document.getElementById('chat-form').addEventListener('submit', (e) => {
@@ -17,5 +18,18 @@ document.getElementById('chat-form').addEventListener('submit', (e) => {
     // Send the message to the server
     socket.emit('chat message', message);
     messageInput.value = '';
+    createblock(message);
   }
 });
+
+function createblock(message){
+    var block = document.createElement('div');
+    block.id = 'message';
+    block.innerText = message;
+    document.getElementById('chat').appendChild(block);
+
+}
+
+});
+
+
