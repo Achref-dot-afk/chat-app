@@ -1,10 +1,28 @@
 const express = require('express');
 const app = express();
-const server = require('http').createServer(app);
-const io = require('socket.io')(server);
+const mongoose = require('mongoose');
+const path = require('path');
+//connect to database 
+mongoose.connect('mongodb://127.0.0.1:27017/chat')
+.then(() => {
+    console.log('Connected to database');
+})
+.catch((err) => {
+    console.log('Error connecting to database');
+    console.log(err);   
+});
+
 
 // Serve static files
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
+app.get('/', (_, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+app.get('/chat', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/chat.html'));
+});
 
 // Handle incoming socket connections
 io.on('connection', (socket) => {
@@ -21,9 +39,7 @@ io.on('connection', (socket) => {
     console.log('A user disconnected.');
   });
 });
-
 // Start the server
-const PORT = 3000;
-server.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
+server.listen(3000, () => {
+  console.log(`Server listening on port 3000.`);
 });
