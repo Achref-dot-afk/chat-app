@@ -1,10 +1,10 @@
-  document.getElementById("leave").onclick = function() {
-    location.href = "http://localhost:3000/";
-  };
-  const urlp = new URLSearchParams(window.location.search);
-  const username = urlp.get('username');
 document.addEventListener('DOMContentLoaded', () => {
 const socket = io();
+  document.getElementById("leave").onclick = function() {
+  location.href = "http://localhost:3000/";
+};
+const urlp = new URLSearchParams(window.location.search);
+const username = urlp.get('username');
 document.getElementById('chat-form').addEventListener('submit', (e) => {
   e.preventDefault();
   const messageInput = document.getElementById('message-input');
