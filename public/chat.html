@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="chat-box">
+    <header>
+      <h2>WaSsUp</h2>
+      <button id="leave">Leave Chatroom</button>
+      <i class="fa-regular fa-face-laugh" style="color: #d6d6ea;"></i>
+    </header>
+    <div id="chat-messages">
+      <div id="chat"></div>
+    </div>
+    <form id="chat-form">
+      <label for="message-input"></label>
+      <input id="message-input" >
+      <button id="send" type="submit">
+        <div class="svg-wrapper-1">
+          <div class="svg-wrapper">
+            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+            </svg>
+          </div>
+        </div>
+        <span>Send</span>
+      </button>
+    </form>
+    <div id="accounts">
+      <h3>Room Name :</h3>
+      <i class="fas fa-comments fa-inverse" id="messages-icon"></i>
+      <h4>WaSsUp Room</h4>
+      <p>Users :</p>
+      <i class="fas fa-users fa-inverse"></i>
+    </div>
+  </div>
+  <script src ="client.js">
+  </script>
+  <script src ="/socket.io/socket.io.js"></script>
+  <script>
+    document.getElementById("leave").onclick = function() {
+      location.href = "http://localhost:3000/";
+    };
+    const urlp = new URLSearchParams(window.location.search);
+    const username = urlp.get('username');
+  </script>
+</body>
+</html>
