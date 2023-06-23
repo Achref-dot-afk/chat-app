@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 const socket = io();
   document.getElementById("leave").onclick = function() {
-  location.href = "https://wassup-q7dt.onrender.com/";
+  location.href = "index.html";
 };
 const urlp = new URLSearchParams(window.location.search);
 const username = urlp.get('username');
