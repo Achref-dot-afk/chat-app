@@ -32,8 +32,10 @@
     </form>
     <div id="accounts">
       <h3>Room Name :</h3>
+      <i class="fas fa-comments fa-inverse" id="messages-icon"></i>
       <h4>WaSsUp Room</h4>
       <p>Users :</p>
+      <i class="fas fa-users fa-inverse"></i>
     </div>
   </div>
   <script src ="client.js">
@@ -43,6 +45,8 @@
     document.getElementById("leave").onclick = function() {
       location.href = "http://localhost:3000/";
     };
+    const urlp = new URLSearchParams(window.location.search);
+    const username = urlp.get('username');
   </script>
 </body>
 </html>

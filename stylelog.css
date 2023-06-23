@@ -17,7 +17,7 @@ h1{
     position: absolute;
     color: white;
     text-align: center;
-    top: 35%;
+    top: 32%;
     left: 33%;
     font-size: 50px;
     letter-spacing: 6px;
@@ -36,8 +36,8 @@ i{
     position: absolute;
     color: white;
     text-align: center;
-    top: 35%;
-    left: 47%;
+    top: 32%;
+    left: 53%;
     font-size: 50px;
 }
 .usernamelabel {
@@ -46,7 +46,7 @@ i{
     font-size: 14px;
     padding: 5px 5px;
     position: absolute;
-    top: 47%;
+    top: 46%;
     left: 33%;
 
   }
@@ -88,7 +88,7 @@ i{
     font-size: 14px;
     transition-duration: .2s;
     position: absolute;
-    top: 57%;
+    top: 62%;
     left: 33%;
   }
   .loginbutton:hover{
