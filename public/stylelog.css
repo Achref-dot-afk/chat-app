@@ -1,11 +1,11 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'ubuntu', sans-serif;
-}
+  font-family : 'ubuntu' , sans-serif;
 
-body {
+}
+body{
   background-color: rgb(23, 22, 22);
   background-blend-mode: multiply;
   width: 100%;
@@ -13,114 +13,116 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
-h1 {
+h1{
   position: absolute;
   color: white;
   text-align: center;
-  top: 32%;
-  left: 20%;
-  font-size: 4vw;
-  letter-spacing: 0.6vw;
+  top: 35%;
+  left: 33%;
+  font-size: 50px;
+  letter-spacing: 6px;
 }
-
-h3 {
+h3{
   position: absolute;
   color: rgb(177, 175, 175);
   text-align: center;
   top: 42%;
-  left: 20%;
-  font-size: 1.6vw;
+  left: 33%;
+  font-size: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 0.4vw;
+  letter-spacing: 4px;
 }
-
+i{
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 35%;
+  left: 47%;
+  font-size: 50px;
+}
 .usernamelabel {
   display: block;
   color: rgb(152, 88, 255);
-  font-size: 0.8vw;
-  padding: 0.2vw 0.2vw;
+  font-size: 14px;
+  padding: 5px 5px;
   position: absolute;
-  top: 46%;
-  left: 20%;
+  top: 47%;
+  left: 33%;
+
 }
 
 #usernameField {
   display: block;
-  width: 40vw;
-  height: 6vw;
+  width: 400px;
+  height: 60px;
   background-color: #292929;
-  border-radius: 2vw;
-  border: 0.2vw solid #292929;
-  padding: 0vw 1.2vw;
+  border-radius: 20px;
+  border: 2px solid #292929;
+  padding: 0px 12px;
   outline: none;
   caret-color: rgb(152, 88, 255);
   color: rgb(212, 212, 212);
-  font-size: 25px;
-  transition-duration: 0.2s;
+  font-size: 14px;
+  transition-duration: .2s;
   position: absolute;
   top: 50%;
-  left: 20%;
+  left: 33%;
 }
 
 #usernameField:focus,
 #usernameField:valid {
-  border: 0.2vw solid rgb(152, 88, 255);
-  transition-duration: 0.2s;
+  border: 2px solid rgb(152, 88, 255);
+  transition-duration: .2s;
 }
-
-.loginbutton {
+.loginbutton{
   display: block;
-  width: 40vw;
-  height: 6vw;
+  width: 400px;
+  height: 60px;
   background-color: rgb(187, 158, 194);
-  border-radius: 2vw;
-  border: 0.2vw solid rgb(187, 158, 194);
-  padding: 0vw 1.2vw;
+  border-radius: 20px;
+  border: 2px solid rgb(187, 158, 194);
+  padding: 0px 12px;
   outline: none;
   caret-color: rgb(152, 88, 255);
   color: rgb(212, 212, 212);
-  font-size: 0.8vw;
-  transition-duration: 0.2s;
+  font-size: 14px;
+  transition-duration: .2s;
   position: absolute;
-  top: 62%;
-  left: 20%;
+  top: 57%;
+  left: 33%;
 }
-
-.loginbutton:hover {
+.loginbutton:hover{
   background-color: rgb(152, 88, 255);
-  border: 0.2vw solid rgb(152, 88, 255);
-  transition-duration: 0.2s;
+  border: 2px solid rgb(152, 88, 255);
+  transition-duration: .2s;
   cursor: pointer;
 }
-
-/* Media Queries for Responsive Design */
-
-@media (max-width: 768px) {
-  h1 {
-      font-size: 6vw;
-      letter-spacing: 1vw;
+@media (max-width : 600px){
+  .loginbutton{
+    width: 245px;
+    left : 20%;
+    top: 59%;
   }
-
-  h3 {
-      font-size: 3vw;
-      letter-spacing: 0.8vw;
+  #usernameField
+  {
+    width: 245px;
+    left : 20%;
+    top: 50%;
   }
-
-  .usernamelabel {
-      font-size: 1.5vw;
-      padding: 0.4vw 0.4vw;
+  .usernamelabel{
+    left : 20%;
+    top: 47%;
   }
-
-  #usernameField {
-      width: 70vw;
-      height: 12vw;
-      font-size: 12px;
+  h1{
+    left : 17%;
+    top: 32%;
   }
-
-  .loginbutton {
-      width: 70vw;
-      height: 12vw;
-      font-size: 15px;
+  h3{
+    left : 3%;
+    top: 40%;
   }
+  /* styling the chat.html */
+  
+
+
 }
